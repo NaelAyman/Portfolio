@@ -1,0 +1,45 @@
+extends index
+
+block pageTitle
+  -var pageTitle = ''
+
+block content
+
+  // Start Page Header
+  section
+    .page-header
+      img(src="img/contact-bg.png", alt="")
+      .title
+        h1 Add Comment
+        ul.breadcrumb
+          li: a(href="index.html") Home 
+          li Add Comment 
+  // End Page Header
+
+  // Start Contact Us
+  section
+    .contact-us
+      .container
+        form.form(action="")
+          .form-group
+            .star-rating
+              span.far.fa-star(data-rating='1')
+              span.far.fa-star(data-rating='2')
+              span.far.fa-star(data-rating='3')
+              span.far.fa-star(data-rating='4')
+              span.far.fa-star(data-rating='5')
+              input.rating-value(type='hidden', name='whatever1', value='2.56')
+          .form-group
+            input.form-control.main-input(type="text" id="name")
+            label(for="name") Name
+              span *
+          .form-group
+            input.form-control.main-input(type="email" id="email")
+            label(for="email") Email
+              span *
+          .form-group
+            textarea.form-control.main-input(id="message")
+            label(for="message") Type Your Message
+              span *
+          button.site-btn(type="submit") Submit Message
+  // End Contact Us

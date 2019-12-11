@@ -1,0 +1,129 @@
+extends index
+
+block pageTitle
+  -var pageTitle = 'blog'
+
+block content
+
+  // Start Page Header
+  section
+    .page-header
+      img(src="img/blog-bg.png", alt="")
+      .title
+        h1 blog
+        ul.breadcrumb
+          li: a(href="index.html") Home 
+          li Blog 
+  // End Page Header
+
+
+  // Start Blogs
+  section
+    .blogs
+      .container
+        .row.blogs-content
+          .col-lg-4.col-md-6.col-12.blog
+            .block
+              .img
+                img(src="img/blog3.png", alt="")
+                .date 
+                  p 20
+                    span jan
+                .hover
+                  a(href="img/blog3.png" data-fancybox="gallery")
+                    i.fas.fa-search-plus
+              .details
+                h3 Lorem Ipsum Is Simply
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                a(href="blog-details.html") READ MORE
+                  i.fas.fa-angle-double-right
+          .col-lg-4.col-md-6.col-12.blog
+            .block
+              .img
+                img(src="img/blog2.png", alt="")
+                .date 
+                  p 20
+                    span jan
+                .hover
+                  a(href="img/blog2.png" data-fancybox="gallery")
+                    i.fas.fa-search-plus
+              .details
+                h3 Lorem Ipsum Is Simply
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                a(href="blog-details.html") READ MORE
+                  i.fas.fa-angle-double-right
+          .col-lg-4.col-md-6.col-12.blog
+            .block
+              .img
+                img(src="img/blog1.png", alt="")
+                .date 
+                  p 20
+                    span jan
+                .hover
+                  a(href="img/blog1.png" data-fancybox="gallery")
+                    i.fas.fa-search-plus
+              .details
+                h3 Lorem Ipsum Is Simply
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                a(href="blog-details.html") READ MORE
+                  i.fas.fa-angle-double-right
+          .col-lg-4.col-md-6.col-12.blog
+            .block
+              .img
+                img(src="img/blog1.png", alt="")
+                .date 
+                  p 20
+                    span jan
+                .hover
+                  a(href="img/blog1.png" data-fancybox="gallery")
+                    i.fas.fa-search-plus
+              .details
+                h3 Lorem Ipsum Is Simply
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                a(href="blog-details.html") READ MORE
+                  i.fas.fa-angle-double-right
+          .col-lg-4.col-md-6.col-12.blog
+            .block
+              .img
+                img(src="img/blog2.png", alt="")
+                .date 
+                  p 20
+                    span jan
+                .hover
+                  a(href="img/blog2.png" data-fancybox="gallery")
+                    i.fas.fa-search-plus
+              .details
+                h3 Lorem Ipsum Is Simply
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                a(href="blog-details.html") READ MORE
+                  i.fas.fa-angle-double-right
+          .col-lg-4.col-md-6.col-12.blog
+            .block
+              .img
+                img(src="img/blog3.png", alt="")
+                .date 
+                  p 20
+                    span jan
+                .hover
+                  a(href="img/blog3.png" data-fancybox="gallery")
+                    i.fas.fa-search-plus
+              .details
+                h3 Lorem Ipsum Is Simply
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                a(href="blog-details.html") READ MORE
+                  i.fas.fa-angle-double-right
+          .col-12
+            ul.pagination
+              li.page-item
+                a.page-link(href='#') 
+                  i.fas.fa-arrow-left
+              li.page-item
+                a.page-link(href='#') 1
+              li.page-item.active
+                a.page-link(href='#') 2
+              li.page-item
+                a.page-link(href='#') 3
+              li.page-item
+                a.page-link(href='#') 
+                  i.fas.fa-arrow-right
+  // End Blogs

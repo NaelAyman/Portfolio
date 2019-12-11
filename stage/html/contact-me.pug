@@ -1,0 +1,68 @@
+extends index
+
+block pageTitle
+  -var pageTitle = 'contact'
+
+block content
+
+  // Start Page Header
+  section
+    .page-header
+      img(src="img/contact-bg.png", alt="")
+      .title
+        h1 Contact Me
+        ul.breadcrumb
+          li: a(href="index.html") Home 
+          li Contact Me 
+  // End Page Header
+
+  // Start Contact Us
+  section
+    .contact-us
+      .container
+        ul.info
+          li
+            i.fas.fa-map-marker-alt
+            .details
+              p Location
+                span Borg Elnor - Mansoura - Egypt
+          li
+            i.fas.fa-envelope
+            .details
+              p E-mail
+                span asokar912@gmail.com
+          li
+            i.fas.fa-phone
+            .details
+              p Phone
+                span +2 010 110 715 55
+        form.form(action="")
+          .row
+            .col-md-6.col-12
+              .form-group
+                input.form-control.main-input(type="text" id="name")
+                label(for="name") Name
+                  span *
+            .col-md-6.col-12
+              .form-group
+                input.form-control.main-input(type="email" id="email")
+                label(for="email") Email
+                  span *
+            .col-md-6.col-12
+              .form-group
+                input.form-control.main-input(type="tel" id="phone")
+                label(for="phone") Phone
+                  span *
+            .col-md-6.col-12
+              .form-group
+                input.form-control.main-input(type="text" id="subject")
+                label(for="subject") Subject
+                  span *
+            .col-12
+              .form-group
+                textarea.form-control.main-input(id="message")
+                label(for="message") Type Your Message
+                  span *
+            .col-12
+              button.site-btn(type="submit") Submit Message
+            // End Contact Us

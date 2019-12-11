@@ -1,0 +1,21 @@
+// Import Color
+@import 'sass/variables/colors';
+
+// Import Layout
+@import 'sass/layout/header';
+@import 'sass/layout/footer';
+@import 'sass/layout/global';
+
+// Import Component
+@import 'sass/components/slider';
+@import 'sass/components/about';
+@import 'sass/components/services';
+@import 'sass/components/portfolio';
+@import 'sass/components/contact-offer';
+@import 'sass/components/testimonial';
+@import 'sass/components/blogs';
+@import 'sass/components/contact-us';
+
+// Import Pages
+@import 'sass/pages/index';
+@import 'sass/pages/blog';

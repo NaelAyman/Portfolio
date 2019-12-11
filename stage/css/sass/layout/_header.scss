@@ -1,0 +1,278 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #161616;
+  transition: all 0.3s ease-in-out;
+  // Start Menu
+  .nav-menu {
+    width: 100%;
+    z-index: 9;
+    box-shadow: none;
+    transition: all 0.3s ease-in-out;
+
+    .menu-content {
+      position: relative;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .right-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+          position: relative;
+          width: 150px;
+          transition: all 0.3s ease-in-out;
+        }
+        .nav-links {
+          display: flex;
+          align-items: center;
+          ul {
+            display: flex;
+            align-items: center;
+            li {
+              margin: 0 15px;
+              font-size: 16px;
+              transition: all 0.3s ease-in-out;
+              a {
+                position: relative;
+                color: $white;
+                display: inline-block;
+                padding-left: 32px;
+                font-weight: 500;
+                transition: all 0.3s ease-in-out;
+                &:after {
+                  content: '';
+                  position: absolute;
+                  height: 1px;
+                  width: 17px;
+                  background-color: $white;
+                  left: 0;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  transition: all 0.3s ease-in-out;
+                }
+              }
+              &:hover, &:active {
+                a {
+                  color: $flatOrange;
+                  &:after {
+                    background-color: $flatOrange;
+                  }
+                }
+              }
+              &.active {
+                a {
+                  color: $flatOrange;
+                  &:after {
+                    background-color: $flatOrange;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .mob-collaps {
+          position: absolute;
+          width: 25px;
+          height: 50px;
+          z-index: 999;
+          right: 0;
+          cursor: pointer;
+          display: none;
+          transition:  all 0.3s ease-in-out;
+          span {
+            display: block;
+            width: 20px;
+            height: 3px;
+            background-color: $white;
+            border-radius: 30px;
+            margin: 4px 0;
+            &:first-child {
+              position: absolute;
+              top: 20px;
+              left: 0;
+              right: 0;
+              margin: auto;
+              transition: all .25s ease-in-out;
+            }
+            &:first-child.rotate {
+              width: 24px;
+              transform: rotate(-45deg) rotateY(360deg);
+              transition: all .25s ease-in-out;
+            }
+            &:nth-child(2) {
+              position: absolute;
+              left: 0;
+              right: 0;
+              margin: auto;
+              top: 27px;
+              opacity: 1;
+              transition: all .25s ease-in-out;
+            }
+            &:nth-child(2).none {
+              left: -100px;
+              opacity: 0;
+              transition: all .25s ease-in-out;
+            }
+            &:nth-child(3) {
+              position: absolute;
+              top: 34px;
+              left: 0;
+              right: 0;
+              margin: auto;
+              transition: all .25s ease-in-out;
+            }
+            &:nth-child(3).rotate2 {
+              width: 24px;
+              top: 20px;
+              transform: rotate(45deg) rotateY(360deg);
+              transition: all .25s ease-in-out;
+            }
+          }
+      }
+    }
+    &.affix {
+      position: fixed;
+      top: 0;
+      z-index: 8;
+    }
+  }
+  // &.smash {
+  //   top: -100px;
+  // }
+  // End Menu
+}
+
+/* Start Media Query */
+
+@media(max-width:767px) {
+
+  /* Start Nav Menu */
+  header {
+    .nav-menu {
+      .menu-content {
+        justify-content: space-between;
+        height: 70px;
+        .logo {
+          width: 90px !important;
+          height: 100%;
+          padding: 10px 0;
+        }
+        .nav-links {
+          ul {
+            display: block !important;
+            position: fixed;
+            top: 0px;
+            background-color: #131313;
+            width: 260px;
+            left: 0px;
+            z-index: 99;
+            height: 100%;
+            overflow-y: auto;
+            padding-bottom: 60px;
+            padding-top: 100px;
+            transform-origin: left;
+            transform: translateX(-100%);
+            transition: all 0.3s ease-in-out;
+            li {
+              position: relative;
+              display: block;
+              height: auto !important;
+              line-height: 45px !important;
+              margin: 0 !important;
+              padding: 0;
+              padding-left: 30px;
+              font-size: 14px;
+              &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 0;
+                background-color: #1E1E1E;
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+              }
+              a {
+                color: $grey !important;
+              }
+              &:hover, &.active {
+                &:after {
+                  width: 100%;
+                }
+                a {
+                  color: $flatOrange !important;
+                }
+              }
+            }
+            &.nav-open {
+              transform: translateX(0);
+            }
+          }
+        }
+        .mob-collaps {
+          display: block !important;
+          top: 5px;
+        }
+      }
+    }
+  }
+  /* End Nav Menu */
+
+}
+
+@media(min-width:768px) and (max-width:991px) {
+
+  /* Start Nav Menu */
+  .nav-menu {
+    .menu-content {
+      height: 70px !important;
+      .logo {
+        width: 80px !important;
+      }
+      .nav-links {
+        ul {
+          li {
+            margin: 0 7px !important;
+            a {
+              font-size: 15px !important;
+              padding-left: 15px !important;
+              &:after {
+                width: 10px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  /* End Nav Menu */
+
+}
+
+@media(min-width:992px) and (max-width:1024px) {
+
+  /* Start Nav Menu */
+  .nav-menu {
+    .menu-content {
+      .nav-links {
+        ul {
+          li {
+            margin: 0 10px !important;
+          }
+        }
+      }
+    }
+  }
+  /* End Nav Menu */
+
+}
+
+/* End Media Query */

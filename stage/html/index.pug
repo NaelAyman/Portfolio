@@ -1,0 +1,494 @@
+block pageTitle
+  -var pageTitle = 'index';
+  -
+    var perces = [
+      {
+        color: '#EBAA14',
+        percentages: 70,
+        number: '70%',
+        skill: 'Adobe XD'
+      } , 
+      {
+        color: '#EBAA14',
+        percentages: 40,
+        number: '40%',
+        skill: 'Illustrator'
+      } , 
+      {
+        color: '#EBAA14',
+        percentages: 50,
+        number: '50%',
+        skill: 'Photoshop'
+      } , 
+      {
+        color: '#EBAA14',
+        percentages: 30,
+        number: '30%',
+        skill: 'Sketch'
+      }
+    ]
+<!DOCTYPE html>
+html#home(lang="en")
+  include layout/head
+  body.n-sec#home
+    //- Start Page Container
+    .page-container
+        include layout/header
+        .main-content
+          block content
+            // Start Slider
+            section
+              .slider
+                .info
+                  ul.social
+                    li: a(href="" data-toggle="tooltip" data-placement="right" title="Facebook")
+                      i.fab.fa-facebook-f
+                    li: a(href="" data-toggle="tooltip" data-placement="right" title="Twitter")
+                      i.fab.fa-twitter
+                    li: a(href="" data-toggle="tooltip" data-placement="right" title="Linkedin")
+                      i.fab.fa-linkedin-in
+                    li: a(href="" data-toggle="tooltip" data-placement="right" title="Behance")
+                      i.fab.fa-behance
+                    li
+                      p Follow Me 
+                        span  ـــــــــــ
+                    li: a(href="" data-toggle="tooltip" data-placement="right" title="Setting") 
+                      i.fas.fa-cog
+                    li: a(href="add-comment.html" data-toggle="tooltip" data-placement="right" title="Add Comment") 
+                      i.fas.fa-comment-dots
+                .swiper-container.main-slider
+                  .swiper-wrapper
+                    -for(var i = 0; i < 5; i++)
+                      .swiper-slide 
+                        img(src="img/slider.png", alt="")
+                        .caption(data-aos="flip-left")
+                          .slider-head
+                            h1 Hi! I'm Nael Ayman
+                            h2 Front End Developer
+                          p Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply
+                          .slider-btns
+                            a(href="") Contact Us
+                            a(href="https://www.youtube.com/watch?v=uXVnbezVhdI" data-fancybox="") 
+                              svg#noun_Video_1955876(xmlns='http://www.w3.org/2000/svg', width='33.898', height='33.898', viewBox='0 0 33.898 33.898')
+                                path#Path_629(data-name='Path 629', d='M16.949,33.9A16.949,16.949,0,1,1,33.9,16.949,16.949,16.949,0,0,1,16.949,33.9Zm0-31.961A15.012,15.012,0,1,0,31.961,16.949,15.012,15.012,0,0,0,16.949,1.937Z', transform='translate(0 0)', fill='#fff')
+                                path#Path_630(data-name='Path 630', d='M353.505,301.779a2.421,2.421,0,0,1-1.211-.329,2.387,2.387,0,0,1-1.211-2.1V289.29a2.421,2.421,0,0,1,3.632-2.1l8.717,5.032a2.421,2.421,0,0,1,0,4.194l-8.717,5.031A2.422,2.422,0,0,1,353.505,301.779Zm0-12.978a.491.491,0,0,0-.484.489v10.063a.484.484,0,0,0,.726.421l8.717-5.031a.484.484,0,0,0,0-.843l-8.717-5.031A.484.484,0,0,0,353.505,288.8Z', transform='translate(-339.461 -277.372)', fill='#fff')
+                              | Watch Video
+                  // Add Pagination
+                  .n-pagi
+                    .swiper-pagination.main-pagination
+                  a.mouse-down.index(href="index.html#about" data-scroll="about")
+                    i.fas.fa-chevron-up
+                    .mouse
+                      .rat
+                    i.fas.fa-chevron-down
+                .info
+            // End Slider
+
+            // Start About Us
+            section
+              .about.n-sec#about
+                .container
+                  .about-content
+                    .row
+                      .col-lg-7.col-md-12.col-12
+                        .info
+                          .head-title
+                            h2 About Us
+                          .details
+                            .head
+                              h1 Welcome To
+                                span Lorem Ipsum Simply
+                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                            p.auther Ahmed Sokar
+                            .btns 
+                              a.site-btn(href="" download="My_CV") Download CV
+                              a.site-btn.light(href="portfolio.html") My Portfoilo
+                      .col-lg-5.col-md-12.col-12
+                        .img
+                          img(src="img/about_img.png", alt="")
+                  .skills.n-sec#skills
+                    .row.percantage-boxes
+                      each perce in perces
+                        .col-lg-3.col-md-6.text-center
+                          .perce-box(data-percent= perce.percentages , data-bar-color= perce.color) 
+                            .numbers
+                              span.number #{perce.number}
+                              span.skill #{perce.skill}
+            // End About Us
+
+            // Start Services
+            section
+              .services.n-sec#services
+                .container
+                  .head-title
+                    h2 Our Services
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                  .service-content
+                    .service
+                      .head
+                        img(src="img/web.png", alt="")
+                        h5 Web Design
+                      .details
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, ex, aliquid repudiandae, veniam commodi nihil eius accusantium magnam dolor consectetur eos tempora sit. Explicabo quos a delectus soluta consequuntur ea.
+                    .service
+                      .head
+                        img(src="img/mobile.png", alt="")
+                        h5 Mobile App
+                      .details
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, ex, aliquid repudiandae, veniam commodi nihil eius accusantium magnam dolor consectetur eos tempora sit. Explicabo quos a delectus soluta consequuntur ea.
+                    .service
+                      .head
+                        img(src="img/camera.png", alt="")
+                        h5 Photography
+                      .details
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio, ex, aliquid repudiandae, veniam commodi nihil eius accusantium magnam dolor consectetur eos tempora sit. Explicabo quos a delectus soluta consequuntur ea.
+            // End Services
+          
+            // Start Portfolio
+            section
+              .portfolio.n-port.n-sec#portfolio
+                .container
+                  .head-title
+                    h2 Our Portfolio
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                  .portfolio-content
+                    .controls
+                      button.filter(data-filter='.web') Web Design
+                      button.filter.active(data-filter='.mobile') Mobile App
+                      button.filter.active(data-filter='.photography') Photography
+                      a.filter(href="portfolio.html") More
+                    #Container
+                      .mix.web(data-myorder='1')
+                        img(src="img/por1.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por1.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.web(data-myorder='2')
+                        img(src="img/por2.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por2.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.web(data-myorder='3')
+                        img(src="img/por3.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por3.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.mobile(data-myorder='4')
+                        img(src="img/por4.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por4.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.web(data-myorder='5')
+                        img(src="img/por5.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por5.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.web(data-myorder='6')
+                        img(src="img/por6.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por6.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.web(data-myorder='12')
+                        img(src="img/por7.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por7.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.mobile(data-myorder='7')
+                        img(src="img/por8.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por8.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.mobile(data-myorder='8')
+                        img(src="img/por1.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por1.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.photography(data-myorder='9')
+                        img(src="img/por2.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por2.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.photography(data-myorder='10')
+                        img(src="img/por3.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por3.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.photography(data-myorder='11')
+                        img(src="img/por4.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por4.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.web(data-myorder='13')
+                        img(src="img/por5.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por5.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .mix.web(data-myorder='14')
+                        img(src="img/por6.jpg", alt="")
+                        .hover
+                          .content
+                            .btns
+                              a(href="img/por6.jpg" data-fancybox="gallery")
+                                i.fas.fa-search-plus
+                              a(href="")
+                                i.fas.fa-link
+                            .title
+                              h3 Project Title
+                              p Web Design
+                      .gap
+                      .gap
+            // End Portfolio
+
+            // Start Contact Offer
+            section
+              .contact-offer
+                .container
+                  .offer-content
+                    .left
+                      img(src="img/shape.png", alt="")
+                    .content
+                      .txt
+                        h1 I'm Available 
+                          span For Freelancing
+                      .contact-btn
+                        a.site-btn.white(href="contact-me.html") Contact Me
+                    .right
+                      img(src="img/shape.png", alt="")
+            // End Contact Offer
+
+            // Start Testimonial
+            section
+              .testimonial
+                .container
+                  .head-title
+                    h2 Clients Testimonials
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                  .testimonial-slider
+                    .swiper-container.swiper-testimonial
+                      .swiper-wrapper
+                        -for(var s = 0; s < 5; s++)
+                          .swiper-slide
+                            .img
+                              img(src="img/about_img.png", alt="")
+                            .details
+                              .txt
+                                img(src="img/text-sign.png", alt="")
+                                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+                              .auther
+                                h4 Nael Ayman
+                                ul.rate
+                                  -for(var i = 0; i < 5; i++)
+                                    li: i.fas.fa-star
+                      // Add Pagination
+                      .swiper-pagination.testimonial-pagination
+                      // Add Arrows
+                      .swiper-button-next
+                        i.fas.fa-arrow-right
+                      .swiper-button-prev
+                        i.fas.fa-arrow-left
+            // End Testimonial
+
+            //- // Start Blogs
+            //- section
+            //-   .blogs
+            //-     .container
+            //-       .head-title
+            //-         h2 Our Blog
+            //-         p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+            //-       .row.blogs-content
+            //-         .col-lg-4.col-md-6.col-12.blog
+            //-           .block
+            //-             .img
+            //-               img(src="img/blog3.png", alt="")
+            //-               .date 
+            //-                 p 20
+            //-                   span jan
+            //-               .hover
+            //-                 a(href="img/blog3.png" data-fancybox="gallery")
+            //-                   i.fas.fa-search-plus
+            //-             .details
+            //-               h3 Lorem Ipsum Is Simply
+            //-               p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            //-               a(href="blog-details.html") READ MORE
+            //-                 i.fas.fa-angle-double-right
+            //-         .col-lg-4.col-md-6.col-12.blog
+            //-           .block
+            //-             .img
+            //-               img(src="img/blog2.png", alt="")
+            //-               .date 
+            //-                 p 20
+            //-                   span jan
+            //-               .hover
+            //-                 a(href="img/blog2.png" data-fancybox="gallery")
+            //-                   i.fas.fa-search-plus
+            //-             .details
+            //-               h3 Lorem Ipsum Is Simply
+            //-               p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            //-               a(href="blog-details.html") READ MORE
+            //-                 i.fas.fa-angle-double-right
+            //-         .col-lg-4.col-md-6.col-12.blog
+            //-           .block
+            //-             .img
+            //-               img(src="img/blog1.png", alt="")
+            //-               .date 
+            //-                 p 20
+            //-                   span jan
+            //-               .hover
+            //-                 a(href="img/blog1.png" data-fancybox="gallery")
+            //-                   i.fas.fa-search-plus
+            //-             .details
+            //-               h3 Lorem Ipsum Is Simply
+            //-               p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+            //-               a(href="blog-details.html") READ MORE
+            //-                 i.fas.fa-angle-double-right
+            //- // End Blogs
+
+            // Start Contact Us
+            section
+              .contact-us.n-sec#contact
+                .container
+                  .head-title
+                    h2 CONTACT ME
+                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                  ul.info
+                    li
+                      i.fas.fa-map-marker-alt
+                      .details
+                        p Location
+                          span Borg Elnor - Mansoura - Egypt
+                    li
+                      i.fas.fa-envelope
+                      .details
+                        p E-mail
+                          span asokar912@gmail.com
+                    li
+                      i.fas.fa-phone
+                      .details
+                        p Phone
+                          span +2 010 110 715 55
+                  form.form(action="")
+                    .row
+                      .col-md-6.col-12
+                        .form-group
+                          input.form-control.main-input(type="text" id="name")
+                          label(for="name") Name
+                            span *
+                      .col-md-6.col-12
+                        .form-group
+                          input.form-control.main-input(type="email" id="email")
+                          label(for="email") Email
+                            span *
+                      .col-md-6.col-12
+                        .form-group
+                          input.form-control.main-input(type="tel" id="phone")
+                          label(for="phone") Phone
+                            span *
+                      .col-md-6.col-12
+                        .form-group
+                          input.form-control.main-input(type="text" id="subject")
+                          label(for="subject") Subject
+                            span *
+                      .col-12
+                        .form-group
+                          textarea.form-control.main-input(id="message")
+                          label(for="message") Type Your Message
+                            span *
+                      .col-12
+                        button.site-btn(type="submit") Submit Message
+            // End Contact Us
+
+        include layout/footer
+    //- End Page Container
+
+    include layout/footer-scripts

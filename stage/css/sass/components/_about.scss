@@ -1,0 +1,173 @@
+.about {
+  position: relative;
+  margin: 40px 0 0;
+  padding: 80px 0 0;
+  background-image: url(../img/grid.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto;
+  overflow: hidden;
+  .info {
+    color: $white;
+    .head-title {
+      max-width: 100%;
+      text-align: left;
+      margin: 0;
+      h2 {
+        position: relative;
+        font-size: 20px;
+        color: $white;
+        display: inline-block;
+        padding-right: 60px;
+        padding-bottom: 0;
+        &:after {
+          content: '';
+          position: absolute;
+          width: 50px !important;
+          height: 1px;
+          background-color: $flatOrange;
+          top: 50%;
+          right: 0;
+          left: auto;
+          bottom: auto;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .details {
+      .head {
+        h1 {
+          font-weight: bold;
+          span {
+            display: block;
+            color: $flatOrange;
+          }
+        }
+      }
+      p {
+        color: $grey;
+        line-height: 1.8;
+        &.auther {
+          text-transform: uppercase;
+        }
+      }
+      .btns {
+        display: flex;
+        .site-btn {
+          margin-right: 20px;
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+  .img {
+    position: relative;
+    text-align: center;
+    img {
+      border-radius: 10px;
+      position: relative;
+      z-index: 2;
+      width: 100%;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      background-color: #EBAA14;
+      bottom: -30px;
+      right: -30px;
+      z-index: 1;
+    }
+  }
+
+  .skills {
+    margin-top: 100px;
+    .perce-box {
+      position: relative;
+      background-image: url(../img/skill-bg.png);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      padding: 15px;
+      .numbers {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        transform: translateY(-50%);
+        span {
+          display: block;
+          &.number {
+            font-size: 45px;
+          }
+          &.skill {
+            color: #9F9F9F;
+            font-size: 20px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+
+  .about {
+    padding: 40px 0 0 !important;
+    .info {
+      .btns {
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        .site-btn {
+          width: 100%;
+          margin-bottom: 10px;
+          margin-right: 0 !important;
+        }
+      }
+    }
+    .img {
+      &:after {
+        bottom: -8px !important;
+        right: -8px !important;
+      }
+    }
+    .skills {
+      padding: 40px 0 0 !important;
+      margin-top: 40px !important;
+      .percantage-boxes {
+        .text-center {
+          &:not(:last-child) {
+            .perce-box {
+              margin-bottom: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+  
+  .about {
+    background-size: 50% auto !important;
+    .info {
+      margin-bottom: 40px;
+    }
+    .img {
+      max-width: 500px;
+      margin: auto;
+    }
+    .skills {
+      .perce-box {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+}

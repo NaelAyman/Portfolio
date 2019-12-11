@@ -1,0 +1,41 @@
+// Start Loader
+
+.overlay
+
+.loading
+  .loader
+      img(src="img/logo.png")
+
+// End Loader
+
+// Start Header
+
+header
+  .nav-menu
+    .container
+      .menu-content
+        .right-content
+          a.logo(href="index.html")
+              img(src="img/logo.png")
+          .nav-links
+            ul
+              li(class = pageTitle === "index" ? "active" : "") 
+                a(href="index.html" data-scroll="home") Home
+              li(class = pageTitle === "aboutUs" ? "active" : "")
+                a.index(href="index.html#about" data-scroll="about") About Us
+              li(class = pageTitle === "services" ? "active" : "")
+                a.index(href="index.html#services" data-scroll="services") Services
+              li(class = pageTitle === "skills" ? "active" : "")
+                a.index(href="index.html#skills" data-scroll="skills") Skils
+              li(class = pageTitle === "portfolio" ? "active" : "")
+                a(href="portfolio.html" data-scroll="portfolio") Portfolio
+              //- li(class = pageTitle === "blog" ? "active" : "")
+              //-   a(href="blogs.html") Blog
+              li(class = pageTitle === "contact" ? "active" : "")
+                a(href="contact-me.html" data-scroll="contact") Contact Me
+        .mob-collaps
+            span
+            span
+            span
+
+// End Header

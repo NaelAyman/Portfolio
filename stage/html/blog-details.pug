@@ -1,0 +1,58 @@
+extends index
+
+block pageTitle
+  -var pageTitle = 'blog'
+
+block content
+
+  // Start Page Header
+  section
+    .page-header
+      img(src="img/blog-bg.png", alt="")
+      .title
+        h1 blog
+        ul.breadcrumb
+          li: a(href="index.html") Home 
+          li: a(href="blogs.html") Blog 
+          li Details Blog 
+  // End Page Header
+
+  // Start Blog Details
+  section
+    .blogs
+      .container
+        .blog-details
+          .block
+            .img
+              img(src="img/blog-details.png", alt="")
+              .date 
+                p 20
+                  span jan
+            .details
+              .txt
+                h3 Lorem Ipsum is simply dummy text of the printing and typesetting industry
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+                p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently
+              ul.info
+                li Lorem Ipsum is simply dummy text of the printing and typesetting industry 
+                li Lorem Ipsum is simply dummy text of the printing and typesetting industry 
+                li Lorem Ipsum is simply dummy text of the printing and typesetting industry 
+              .blog-foot
+                .tags
+                  h2 Tags
+                  ul
+                    li: a(href="") Design
+                    li: a(href="") Mobile App
+                    li: a(href="") Design
+                    li: a(href="") Mobile App
+                    li: a(href="") Design
+                .tags
+                  h2 Share
+                  ul.social
+                    li: a(href="")
+                      i.fab.fa-twitter
+                    li: a(href="")
+                      i.fab.fa-facebook-f
+                    li: a(href="")
+                      i.fab.fa-google-plus-g
+  // End Blog Details
